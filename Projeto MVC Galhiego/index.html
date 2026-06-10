@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="css/style.css" />
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <header class="topo">
+        <div>
+          <span class="tag">MVC</span>
+          <h1>Gerenciador de tarefas</h1>
+          <p>Organize seu dia, marque o que terminou e mantenha tudo salvo.</p>
+        </div>
+        <button id="toggle-tema" class="btn-tema" title="Alternar tema">🌙</button>
+      </header>
+
+      <form id="form-tarefa" class="input-group">
+        <input type="text" id="tarefa-input" placeholder="Digite uma nova tarefa..." autocomplete="off" />
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <section class="resumo">
+        <div>
+          <strong id="total-tarefas">0</strong>
+          <span>Total</span>
+        </div>
+        <div>
+          <strong id="pendentes-tarefas">0</strong>
+          <span>Pendentes</span>
+        </div>
+        <div>
+          <strong id="concluidas-tarefas">0</strong>
+          <span>Concluídas</span>
+        </div>
+      </section>
+
+      <nav class="filtros" aria-label="Filtros de tarefas">
+        <button class="filtro ativo" data-filtro="todas">Todas</button>
+        <button class="filtro" data-filtro="pendentes">Pendentes</button>
+        <button class="filtro" data-filtro="concluidas">Concluídas</button>
+      </nav>
+
+      <ul id="lista-container" class="lista"></ul>
+
+      <div class="acoes-finais">
+        <button id="limpar-concluidas" class="btn-secundario">Limpar concluídas</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
